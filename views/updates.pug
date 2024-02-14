@@ -1,0 +1,23 @@
+doctype html
+html 
+    head 
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body    
+        h1 #{title}
+        
+        a(href="http://localhost:3000") Return to the homepage
+        br
+
+        form(action="/update-cobj", method="post")
+            label(for="club") Superhero Name:
+            input(type="text", id="club", name="club", required)
+
+            label(for="name") Superhero Club:
+            input(type="text", id="name", name="name", required)
+
+            label(for="superpower") Superhero Superpower:
+            input(type="text", id="superpower", name="superpower", required)
+
+            button(type="submit") Submit Superhero Info
